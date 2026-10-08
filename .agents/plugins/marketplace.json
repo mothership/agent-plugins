@@ -1,0 +1,20 @@
+{
+	"name": "mothership",
+	"interface": {
+		"displayName": "Mothership"
+	},
+	"plugins": [
+		{
+			"name": "mothership",
+			"source": {
+				"source": "local",
+				"path": "./plugins/mothership"
+			},
+			"policy": {
+				"installation": "AVAILABLE",
+				"authentication": "ON_INSTALL"
+			},
+			"category": "Business & Operations"
+		}
+	]
+}

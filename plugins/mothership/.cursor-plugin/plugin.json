@@ -1,0 +1,28 @@
+{
+	"name": "mothership",
+	"displayName": "Mothership",
+	"version": "0.6.3",
+	"description": "Connect Cursor to your Mothership freight account.",
+	"author": {
+		"name": "Mothership"
+	},
+	"homepage": "https://www.mothership.com",
+	"license": "Proprietary",
+	"keywords": [
+		"freight",
+		"shipping",
+		"logistics",
+		"ltl",
+		"mothership"
+	],
+	"logo": "./assets/logo.png",
+	"category": "Business & Operations",
+	"mcpServers": {
+		"mothership": {
+			"url": "https://mcp.mothership.com",
+			"auth": {
+				"CLIENT_ID": "cursor"
+			}
+		}
+	}
+}

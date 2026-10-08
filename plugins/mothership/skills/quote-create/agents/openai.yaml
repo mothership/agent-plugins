@@ -1,0 +1,10 @@
+interface:
+  display_name: "Get a quote"
+  short_description: "Freight rates for a shipment, and booking"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mothership"
+      description: "Mothership MCP server for the connected account"
+      transport: "streamable_http"
+      url: "https://mcp.mothership.com"

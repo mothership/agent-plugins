@@ -1,0 +1,15 @@
+{
+	"name": "mothership",
+	"description": "Mothership's plugins for Claude",
+	"owner": {
+		"name": "Mothership",
+		"url": "https://www.mothership.com"
+	},
+	"plugins": [
+		{
+			"name": "mothership",
+			"source": "./plugins/mothership",
+			"category": "Business & Operations"
+		}
+	]
+}

@@ -1,0 +1,54 @@
+{
+	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+	"name": "mothership",
+	"version": "0.6.3",
+	"description": "Connect ChatGPT and Codex to your Mothership freight account.",
+	"author": {
+		"name": "Mothership",
+		"url": "https://www.mothership.com"
+	},
+	"homepage": "https://www.mothership.com",
+	"license": "Proprietary",
+	"keywords": [
+		"freight",
+		"shipping",
+		"logistics",
+		"ltl",
+		"mothership"
+	],
+	"extensions": {
+		"com.openai": {
+			"interface": {
+				"displayName": "Mothership",
+				"shortDescription": "Mothership freight account",
+				"longDescription": "Mothership is a freight shipping platform for quoting, booking, and tracking LTL and truckload shipments. This plugin signs you in with your Mothership account and connects ChatGPT and Codex to the Mothership MCP server. Get freight rates for a shipment from its pickup and delivery addresses and cargo, shown as a quote card with each carrier's price and delivery date. Look up your organization's shipments by reference number, PRO, BOL, pickup number, or your own reference: current status, pickup and delivery windows, carrier and tracking numbers, cargo, location when the carrier reports it, documents, and the newest tracking updates, shown as a shipment card. You can also confirm which Mothership user and organization are connected. Book quotes, change shipments, and pay in the Mothership dashboard.",
+				"developerName": "Mothership",
+				"category": "Business & Operations",
+				"capabilities": [
+					"Read",
+					"Write"
+				],
+				"websiteURL": "https://www.mothership.com",
+				"supportURL": "https://help.mothership.com",
+				"privacyPolicyURL": "https://help.mothership.com/privacy-policy",
+				"termsOfServiceURL": "https://help.mothership.com/terms-of-service-general-terms",
+				"defaultPrompt": [
+					"Where is my Mothership shipment?",
+					"Get a freight quote for 2 pallets from Reno, NV to Phoenix, AZ",
+					"Which Mothership account am I connected as?"
+				],
+				"brandColor": "#161616",
+				"brandColorDark": "#FFFFFF",
+				"composerIcon": "./assets/logo.png",
+				"logo": "./assets/logo.png"
+			},
+			"onboardingSkill": "./skills/get-started/SKILL.md",
+			"publication": {
+				"countries": [
+					"US"
+				],
+				"release_notes": "Connects to the Mothership MCP server at mcp.mothership.com. Get freight rates and create quotes with the quote-create tool, which shows a quote card with every carrier's price and delivery date. Shipment tracking now uses the shipment-get tool, which shows a shipment card with status, stops, cargo, documents, and tracking updates."
+			}
+		}
+	}
+}

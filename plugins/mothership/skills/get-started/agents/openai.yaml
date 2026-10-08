@@ -1,0 +1,10 @@
+interface:
+  display_name: "Get started"
+  short_description: "Confirm your Mothership connection"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "mothership"
+      description: "Mothership MCP server for the connected account"
+      transport: "streamable_http"
+      url: "https://mcp.mothership.com"

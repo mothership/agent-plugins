@@ -1,0 +1,16 @@
+{
+	"name": "mothership",
+	"owner": {
+		"name": "Mothership"
+	},
+	"metadata": {
+		"description": "Mothership's plugins for Cursor"
+	},
+	"plugins": [
+		{
+			"name": "mothership",
+			"source": "./plugins/mothership",
+			"description": "Get freight quotes and track shipments in your Mothership account."
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"name": "mothership",
+	"displayName": "Mothership",
+	"version": "0.6.3",
+	"description": "Connect Claude to your Mothership freight account.",
+	"author": {
+		"name": "Mothership",
+		"url": "https://www.mothership.com"
+	},
+	"homepage": "https://www.mothership.com",
+	"license": "Proprietary",
+	"keywords": [
+		"freight",
+		"shipping",
+		"logistics",
+		"ltl",
+		"mothership"
+	],
+	"icon": "./assets/logo.png",
+	"supportUrl": "https://help.mothership.com",
+	"privacyPolicyUrl": "https://help.mothership.com/privacy-policy",
+	"termsOfServiceUrl": "https://help.mothership.com/terms-of-service-general-terms",
+	"mcpServers": "./mcp.json"
+}
