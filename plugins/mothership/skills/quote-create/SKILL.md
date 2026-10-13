@@ -38,9 +38,9 @@ If the call fails, its message says why, such as a holiday pickup date or a lane
 Hosts that support it show the rates as a quote card. When the card is showing, answer the question in a sentence or two and leave the full list to the card.
 
 - `rates` is every rate, cheapest first. Lead with the cheapest, and mention a faster or guaranteed option when there is one.
-- `price` is the rate as the rate card shows it, before Freight Protect, checkout fees, credits, and promotions. When the user asks what they'll pay, use `breakdown.total` and walk through `breakdown` if they want the detail. When `breakdown.total` is null, say the checkout total isn't available. Write amounts like $1,137.80.
+- `priceUsd` is the rate as the rate card shows it, before Freight Protect, checkout fees, credits, and promotions. When the user asks what they'll pay, use `breakdown.totalUsd` and walk through `breakdown` if they want the detail. When `breakdown.totalUsd` is null, say the checkout total isn't available. Amounts are US dollars. Write them like $1,137.80.
 - `pickupDate`, `deliveryDate`, and `transit` are estimates unless `guaranteed` is true. `transit` uses the dashboard's wording, such as "4 business days (Guaranteed by 12PM)".
-- `mode` is LTL for freight that shares a truck, or FTL for a truck dedicated to the shipment.
+- `freightMode` is `ltl` for freight that shares a truck, or `ftl` for a truck dedicated to the shipment. Call them LTL and FTL when you talk to the user.
 - `unavailableCarriers` lists carriers that returned no rate, with their reasons. Bring it up when the user asks about a carrier, or when there are no rates at all.
 - When `promotionError` is set, the promotion code didn't apply. Tell the user why.
 
