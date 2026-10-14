@@ -1,0 +1,10 @@
+interface:
+  display_name: "Explain a rebill"
+  short_description: "Rebill charges and disputes"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "Mothership"
+      description: "Mothership MCP server for the connected account"
+      transport: "streamable_http"
+      url: "https://mcp.mothership.com"
