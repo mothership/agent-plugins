@@ -1,7 +1,7 @@
 {
 	"name": "mothership",
 	"displayName": "Mothership",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Connect Cursor to Mothership LTL, FTL & Local Freight.",
 	"author": {
 		"name": "Mothership"

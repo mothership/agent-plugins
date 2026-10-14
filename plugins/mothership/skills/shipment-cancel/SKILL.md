@@ -49,7 +49,7 @@ The second call returns `not-cancellable` instead when the shipment can't be can
 
 ## When a confirmation fails
 
-Nothing is cancelled when the fee or refund estimate changed since the check, or when the token expired. The error says which. An error can also come after an earlier confirmation already went through.
+Nothing is cancelled when the fee or refund estimate changed since the check, and the error says so. A token that expired or was already used gets one error for both, because an earlier confirmation with it may have gone through.
 
 When the error says the shipment can't be cancelled here, an earlier cancellation of it set a higher fee than the one the user accepted. Checking again would show the same terms, and the next confirmation would fail the same way, so don't check again. Tell the user nothing was cancelled, and that Mothership support can help through the help center at https://help.mothership.com.
 

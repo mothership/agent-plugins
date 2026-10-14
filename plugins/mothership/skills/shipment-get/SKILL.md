@@ -61,7 +61,7 @@ If the user says the driver didn't arrive or couldn't complete the pickup, share
 
 To cancel the shipment, follow the shipment-cancel skill. It shows the fee and refund estimate before anything changes.
 
-An LTL shipment that's already in progress can't be expedited, even for an extra charge. Never promise to speed it up. Suggest re-booking on a faster service or changing the appointment in the dashboard instead.
+An LTL shipment that's already in progress can't be expedited, even for an extra charge. Never promise to speed it up. Suggest changing the appointment in the dashboard, or re-booking on a faster service, which the quote-create skill can do here.
 
 The Mothership dashboard at https://dashboard.mothership.com may offer other changes, depending on the shipment:
 

@@ -8,7 +8,7 @@ Plugins that connect Claude, ChatGPT, Codex, and Cursor to [Mothership](https://
 | `.agents/plugins/marketplace.json` | ChatGPT and Codex |
 | `.cursor-plugin/marketplace.json` | Cursor |
 
-Each plugin folder carries the portable [Agent Plugins](https://agent-plugins.org) manifest that ChatGPT and Codex read, the `.claude-plugin/plugin.json` manifest that Claude and Cursor read, and one `mcp.json` that every host uses.
+Each plugin folder carries the portable [Agent Plugins](https://agent-plugins.org) manifest that ChatGPT and Codex read, the `.claude-plugin/plugin.json` manifest that Claude reads, and the `.cursor-plugin/plugin.json` manifest that Cursor reads. ChatGPT, Codex and Claude share one `mcp.json`, and the Cursor manifest names the same server.
 
 | Plugin | What it does |
 | --- | --- |

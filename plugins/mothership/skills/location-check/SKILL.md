@@ -49,4 +49,4 @@ Each resolved location's `activeSameDayZone` names its same-day zone. Null means
 
 `location-search` doesn't quote rates, transit times, pickup availability or delivery dates. A same-day `eligible` verdict means the locations are inside the same-day area. It doesn't promise a same-day rate, a pickup time or a delivery date. Never promise any of those from these results.
 
-For prices and dates, follow the quote-create skill, and pass each location's `quoteLocation` to `quote-create` unchanged. When `quoteLocation` is null, Mothership can't quote that place, because it's outside the lower 48 states or didn't resolve to a full place.
+For prices and dates, follow the quote-create skill, and pass each location's `quoteLocation` to `quote-create` unchanged. When a location has no `quoteLocation`, Mothership can't quote that place, because it's outside the lower 48 states or didn't resolve to a full place.

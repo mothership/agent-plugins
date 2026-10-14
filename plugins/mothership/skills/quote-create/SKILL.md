@@ -14,9 +14,9 @@ description: Use when the user wants a freight quote, rates, or prices for a shi
 - Each cargo line: the handling unit, such as pallet or crate, how many, and the weight and dimensions of one unit in whole pounds and inches. A standard pallet is 48 x 40 inches, but its height and weight have to come from the user. Pass a freight class only when the user knows it, such as from an NMFC item they confirmed, and pass that item's code as `nmfcCode`. Otherwise carriers price on density. The freight-class skill finds an NMFC item and its class, or estimates a class from density, if the user asks.
 - Hazardous materials, alcohol, or tobacco on any line. Mothership ships all three. Hazmat lines need the UN or NA number, hazard class, proper shipping name, package count and type, and a 24-hour emergency contact's name, company and phone. Add the packing group when the shipping papers show one.
 
-Pass along anything else the user mentions, such as company names, contacts, phone numbers, facility hours, cargo descriptions, reference numbers, a declared value for Freight Protect coverage, or a promotion code. Booking needs most of these, and carriers price on facility hours.
+Pass along anything else the user mentions, such as company names, contacts, phone numbers, facility hours, cargo descriptions, reference numbers, a declared value for FreightProtect coverage, or a promotion code. Booking needs most of these, and carriers price on facility hours.
 
-Leave out the payment method and account credits. The quote uses the organization's default checkout method and applies credits on its own.
+Leave out the payment method and account credits unless the user asks to pay another way or not to use credits. The quote uses the organization's default checkout method and applies credits on its own. When the user picks another method, pass its id as `paymentMethodId` to `quote-create` and again to `shipment-create`, which prices the payment method again.
 
 ## Find the addresses
 
@@ -38,7 +38,7 @@ If the call fails, its message says why, such as a holiday pickup date or a lane
 Hosts that support it show the rates as a quote card. When the card is showing, answer the question in a sentence or two and leave the full list to the card.
 
 - `rates` is every rate, cheapest first. Lead with the cheapest, and mention a faster or guaranteed option when there is one.
-- `priceUsd` is the rate as the rate card shows it, before Freight Protect, checkout fees, credits, and promotions. When the user asks what they'll pay, use `breakdown.totalUsd` and walk through `breakdown` if they want the detail. When `breakdown.totalUsd` is null, say the checkout total isn't available. Amounts are US dollars. Write them like $1,137.80.
+- `priceUsd` is the rate as the rate card shows it, before FreightProtect, checkout fees, credits, and promotions. When the user asks what they'll pay, use `breakdown.totalUsd` and walk through `breakdown` if they want the detail. When `breakdown.totalUsd` is null, say the checkout total isn't available. Amounts are US dollars. Write them like $1,137.80.
 - `pickupDate`, `deliveryDate`, and `transit` are estimates. When `guaranteed` is true, the carrier guarantees the delivery date, and the pickup date is still an estimate. `transit` uses the dashboard's wording, such as "4 business days (Guaranteed by 12PM)".
 - `freightMode` is `ltl` for freight that shares a truck, or `ftl` for a truck dedicated to the shipment. Call them LTL and FTL when you talk to the user.
 - `unavailableCarriers` lists carriers that returned no rate, with their reasons. Bring it up when the user asks about a carrier, or when there are no rates at all.
@@ -46,7 +46,7 @@ Hosts that support it show the rates as a quote card. When the card is showing, 
 
 ## Book the quote
 
-Book with `shipment-create`. It books a real shipment and charges their payment method, and it can't be undone. Call it first with `quoteId` and the `rateId` the user picked. That call books nothing and returns a review with the total. Show the user the whole review, including every notice, and confirm only after they say to book. The tool's description covers the rest.
+Book with `shipment-create`. It books a real shipment and charges their payment method, and it can't be undone. Call it first with `quoteId` and the `rateId` the user picked. That call books nothing and returns a review with the total, which hosts that support it show as a checkout card. Show the user the whole review, including every notice, and confirm only after they say to book. The tool's description covers the rest.
 
 `dashboardUrl` opens the quote in the Mothership dashboard, where the user can also book it. Later changes happen in the dashboard. To cancel, follow the shipment-cancel skill.
 

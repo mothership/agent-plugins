@@ -20,7 +20,7 @@ If `account-get` returns an authorization error, ask the user to reconnect Mothe
 Describe the tools that are available in this conversation. Which ones appear depends on the account's permissions.
 
 - `quote-create` gets freight rates for a shipment and creates a quote in the user's Mothership dashboard. Hosts that support it show the rates as a quote card. The quote-create skill explains what to gather, how to read the rates, and how to get a quote ready to book.
-- `shipment-create` books a quoted rate once the user has reviewed the total and said to book. The quote-create skill covers it.
+- `shipment-create` books a quoted rate once the user has reviewed the total and said to book, and shows the review as a checkout card in hosts that support it. The quote-create skill covers it.
 - `shipment-get` looks up a shipment and shows a shipment card in hosts that support it. The shipment-get skill explains how to read the results.
 - `shipment-cancel` checks what cancelling a shipment costs and refunds, then cancels it once the user says to. The shipment-cancel skill walks through it.
 - `shipment-rebill-list` and `shipment-rebill-get` explain charges a carrier billed after a shipment, and where a dispute stands. The shipment-rebill skill covers them.
