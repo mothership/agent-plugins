@@ -10,7 +10,7 @@
 		{
 			"name": "mothership",
 			"source": "./plugins/mothership",
-			"description": "Get freight quotes and track shipments in your Mothership account."
+			"description": "Mothership LTL, FTL & Local Freight: get quotes and track shipments."
 		}
 	]
 }

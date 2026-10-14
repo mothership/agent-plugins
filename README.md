@@ -1,6 +1,6 @@
 # Mothership plugins
 
-Plugins that connect Claude, ChatGPT, Codex, and Cursor to your [Mothership](https://www.mothership.com) freight account. Each host reads its own marketplace file, and all three list the same plugin folders:
+Plugins that connect Claude, ChatGPT, Codex, and Cursor to [Mothership](https://www.mothership.com) LTL, FTL & Local Freight. Each host reads its own marketplace file, and all three list the same plugin folders:
 
 | Marketplace file | Read by |
 | --- | --- |
