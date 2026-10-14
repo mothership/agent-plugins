@@ -1,7 +1,7 @@
 {
 	"name": "mothership",
 	"displayName": "Mothership",
-	"version": "0.6.5",
+	"version": "0.6.6",
 	"description": "Connect Cursor to your Mothership freight account.",
 	"author": {
 		"name": "Mothership"
