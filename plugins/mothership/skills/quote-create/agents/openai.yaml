@@ -4,7 +4,7 @@ interface:
 dependencies:
   tools:
     - type: "mcp"
-      value: "mothership"
+      value: "Mothership"
       description: "Mothership MCP server for the connected account"
       transport: "streamable_http"
       url: "https://mcp.mothership.com"
