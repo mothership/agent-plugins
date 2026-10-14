@@ -1,7 +1,7 @@
 {
 	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
 	"name": "mothership",
-	"version": "0.8.0",
+	"version": "1.0.1",
 	"description": "Connect ChatGPT and Codex to Mothership LTL, FTL & Local Freight.",
 	"author": {
 		"name": "Mothership",
@@ -21,7 +21,7 @@
 			"interface": {
 				"displayName": "Mothership",
 				"shortDescription": "LTL, FTL & Local Freight",
-				"longDescription": "Mothership is a freight shipping platform for quoting, booking, and tracking LTL and truckload shipments. This plugin signs you in with your Mothership account and connects ChatGPT and Codex to the Mothership MCP server. Get freight rates for a shipment from its pickup and delivery addresses and cargo, shown as a quote card with each carrier's price and delivery date. Look up your organization's shipments by reference number, PRO, BOL, pickup number, or your own reference: current status, pickup and delivery windows, carrier and tracking numbers, cargo, location when the carrier reports it, documents, and the newest tracking updates, shown as a shipment card. You can also confirm which Mothership user and organization are connected. Book quotes, change shipments, and pay in the Mothership dashboard.",
+				"longDescription": "Mothership is a freight shipping platform for LTL, truckload, and local freight. This plugin connects ChatGPT and Codex to your Mothership account, so you can quote, book, and track shipments in plain language. Compare carrier rates and delivery dates, book the one you want, and check where your shipments are. You can also cancel a shipment, find a freight class, check whether Mothership serves an address, and review your billing. Anything that costs money waits for your confirmation.",
 				"developerName": "Mothership",
 				"category": "Business & Operations",
 				"capabilities": [
@@ -45,7 +45,7 @@
 			"onboardingSkill": "./skills/get-started/SKILL.md",
 			"publication": {
 				"countries": [],
-				"release_notes": "Connects to the Mothership MCP server at mcp.mothership.com. Get freight rates and create quotes with the quote-create tool, which shows a quote card with every carrier's price and delivery date. Shipment tracking now uses the shipment-get tool, which shows a shipment card with status, stops, cargo, documents, and tracking updates."
+				"release_notes": "Connects to the Mothership MCP server at mcp.mothership.com. Get freight rates with quote-create, then book one with shipment-create, which shows a checkout card and books only after you confirm. Track a shipment with shipment-get, and find shipments with shipment-search and shipment-list. Cancel a shipment with shipment-cancel after it shows the fee and refund. Look up NMFC items and freight classes with nmfc-search, nmfc-get and freight-class-calculate, check service areas and address types with location-search, and review rebills and invoices."
 			}
 		}
 	}
