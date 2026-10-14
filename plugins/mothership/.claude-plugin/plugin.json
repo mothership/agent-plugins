@@ -1,7 +1,7 @@
 {
 	"name": "mothership",
 	"displayName": "Mothership",
-	"version": "0.7.0",
+	"version": "0.8.0",
 	"description": "Connect Claude to Mothership LTL, FTL & Local Freight.",
 	"author": {
 		"name": "Mothership",

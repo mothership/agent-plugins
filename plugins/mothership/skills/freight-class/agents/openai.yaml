@@ -1,6 +1,6 @@
 interface:
-  display_name: "Estimate freight class"
-  short_description: "Class from weight and size"
+  display_name: "Find a freight class"
+  short_description: "NMFC items and density classes"
 dependencies:
   tools:
     - type: "mcp"

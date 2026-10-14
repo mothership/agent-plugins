@@ -25,7 +25,7 @@ Describe the tools that are available in this conversation. Which ones appear de
 - `shipment-cancel` checks what cancelling a shipment costs and refunds, then cancels it once the user says to. The shipment-cancel skill walks through it.
 - `shipment-rebill-list` and `shipment-rebill-get` explain charges a carrier billed after a shipment, and where a dispute stands. The shipment-rebill skill covers them.
 - `location-search` checks whether Mothership serves an address, and whether it's residential or limited access. The location-check skill covers it.
-- `freight-class-calculate` estimates a freight class from weight and dimensions. The freight-class skill covers it.
+- `nmfc-search` finds the NMFC item for what the user ships, `nmfc-get` reads the classes an NMFC code sets, and `freight-class-calculate` estimates a freight class from weight and dimensions. The freight-class skill covers all three.
 
 ## Booking, changes, and account help
 
