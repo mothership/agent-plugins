@@ -1,7 +1,7 @@
 {
 	"name": "mothership",
 	"displayName": "Mothership",
-	"version": "0.6.6",
+	"version": "0.6.7",
 	"description": "Connect Claude to your Mothership freight account.",
 	"author": {
 		"name": "Mothership",
