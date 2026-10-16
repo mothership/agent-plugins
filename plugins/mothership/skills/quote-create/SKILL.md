@@ -35,7 +35,7 @@ If the call fails, its message says why, such as a holiday pickup date or a lane
 
 ## Explain the rates
 
-Hosts that support it show the rates as a quote card. When the card is showing, answer the question in a sentence or two and leave the full list to the card.
+Hosts that support it can show the rates as a quote card with `render-ui`, and the `quote-create` result ends with the call to make. Show the card when the user is choosing a rate. Skip it when you're comparing several quotes or only need a price for your answer. When the card is showing, answer the question in a sentence or two and leave the full list to the card.
 
 - `rates` is every rate, cheapest first. Lead with the cheapest, and mention a faster or guaranteed option when there is one.
 - `priceUsd` is the rate as the rate card shows it, before FreightProtect, checkout fees, credits, and promotions. When the user asks what they'll pay, use `breakdown.totalUsd` and walk through `breakdown` if they want the detail. When `breakdown.totalUsd` is null, say the checkout total isn't available. Amounts are US dollars. Write them like $1,137.80.

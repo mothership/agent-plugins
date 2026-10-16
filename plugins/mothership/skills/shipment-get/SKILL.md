@@ -12,7 +12,7 @@ description: Use when the user asks about a Mothership shipment's status, where 
 3. If the result is "Shipment not found", ask the user to double-check the identifier and try again.
 4. If the identifier matches more than one shipment, ask the user for the Mothership reference number.
 
-Hosts that support it show the result as a shipment card. When the card is showing, answer the question and leave the full detail to the card.
+Hosts that support it can show the shipment as a card with `render-ui`, and the `shipment-get` result ends with the call to make. Show the card when the user asked about this shipment. Skip it when you looked the shipment up for another task, such as quoting it again or cancelling it. When the card is showing, answer the question and leave the full detail to the card.
 
 ## Answer what was asked
 
