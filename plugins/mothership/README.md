@@ -4,7 +4,7 @@ Mothership is a freight shipping platform for quoting, booking, and tracking LTL
 
 ## What it does
 
-- Gets freight rates for a shipment and books a rate after you confirm the total, payment method, and terms.
+- Gets freight rates for a shipment, with a link to book a rate in the Mothership dashboard.
 - Looks up a shipment by its reference number, PRO, BOL, pickup number, or your own reference: status, pickup and delivery windows, carrier and tracking numbers, cargo, location when the carrier reports it, documents, and the newest tracking updates.
 - Finds, lists, and counts your organization's shipments, and cancels one after it shows the cancellation fee and refund and you confirm.
 - Finds a freight class from an NMFC item number, a commodity description, or weight and dimensions, and checks whether Mothership serves an address.

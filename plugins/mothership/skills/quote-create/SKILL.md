@@ -1,6 +1,6 @@
 ---
 name: quote-create
-description: Use when the user wants a freight quote, rates, or prices for a shipment, asks what it would cost or how long it would take to ship something, or wants to book. Finds the addresses with location-search, gets rates with quote-create, explains them accurately, gathers what booking still needs, and books the rate the user picks with shipment-create.
+description: Use when the user wants a freight quote, rates, or prices for a shipment, asks what it would cost or how long it would take to ship something, or wants to book. Finds the addresses with location-search, gets rates with quote-create, explains them accurately, gathers what booking still needs, and sends the user to the dashboard to book the rate they pick.
 ---
 
 # Get a Mothership quote
@@ -16,7 +16,7 @@ description: Use when the user wants a freight quote, rates, or prices for a shi
 
 Pass along anything else the user mentions, such as company names, contacts, phone numbers, facility hours, cargo descriptions, reference numbers, a declared value for FreightProtect coverage, or a promotion code. Booking needs most of these, and carriers price on facility hours.
 
-Leave out the payment method and account credits unless the user asks to pay another way or not to use credits. The quote uses the organization's default checkout method and applies credits on its own. When the user picks another method, pass its id as `paymentMethodId` to `quote-create` and again to `shipment-create`, which prices the payment method again.
+Leave out the payment method and account credits unless the user asks to pay another way or not to use credits. The quote uses the organization's default checkout method and applies credits on its own. When the user picks another method, pass its id as `paymentMethodId`.
 
 ## Find the addresses
 
@@ -46,8 +46,6 @@ Hosts that support it can show the rates as a quote card with `render-ui`, and t
 
 ## Book the quote
 
-Book with `shipment-create`. It books a real shipment and charges their payment method, and it can't be undone. Call it first with `quoteId` and the `rateId` the user picked. That call books nothing and returns a review with the total, which hosts that support it show as a checkout card. Show the user the whole review, including every notice, and confirm only after they say to book. The tool's description covers the rest.
+The user books in the Mothership dashboard. When they pick a rate or ask to book, give them `dashboardUrl`, which opens the quote there. They choose the rate, review the total and payment method, and book. You can't book for them. Later changes happen in the dashboard. To cancel, follow the shipment-cancel skill.
 
-`dashboardUrl` opens the quote in the Mothership dashboard, where the user can also book it. Later changes happen in the dashboard. To cancel, follow the shipment-cancel skill.
-
-When `purchase.ready` is false, `purchase.missing` lists what booking still needs. Each item's `field` names the `quote-create` input to fill, such as `pickup.phone` or `cargo[0].description`, and its `message` says what's wrong. Ask the user for those details, then call `quote-create` once more with everything. That makes a new quote with the details booking needs, so book that one.
+When `purchase.ready` is false, `purchase.missing` lists what booking still needs. Each item's `field` names the `quote-create` input to fill, such as `pickup.phone` or `cargo[0].description`, and its `message` says what's wrong. Ask the user for those details, then call `quote-create` once more with everything. That makes a new quote with the details booking needs, so book that one. The user can also add them in the dashboard.

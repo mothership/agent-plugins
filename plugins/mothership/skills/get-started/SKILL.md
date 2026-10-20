@@ -20,7 +20,6 @@ If `account-get` returns an authorization error, ask the user to reconnect Mothe
 Describe the tools that are available in this conversation. Which ones appear depends on the account's permissions.
 
 - `quote-create` gets freight rates for a shipment and creates a quote in the user's Mothership dashboard. Hosts that support it can show the rates as a quote card. The quote-create skill explains what to gather, how to read the rates, and how to get a quote ready to book.
-- `shipment-create` books a quoted rate once the user has reviewed the total and said to book, and shows the review as a checkout card in hosts that support it. The quote-create skill covers it.
 - `shipment-get` looks up a shipment, which hosts that support it can show as a shipment card. The shipment-get skill explains how to read the results.
 - `render-ui` shows a shipment, a list of shipments, a quote's rates or payment methods as a card in hosts that support it, when the user wants to see one. Results that can be shown say how.
 - `shipment-cancel` checks what cancelling a shipment costs and refunds, then cancels it once the user says to. The shipment-cancel skill walks through it.
@@ -30,6 +29,6 @@ Describe the tools that are available in this conversation. Which ones appear de
 
 ## Booking, changes, and account help
 
-Quotes are booked here with `shipment-create`, as the quote-create skill explains. Each quote's `dashboardUrl` also opens it in the dashboard. Edits, reschedules, rebill disputes, and payment happen in the Mothership dashboard at https://dashboard.mothership.com. For help with an account or a shipment, the Mothership help center is at https://help.mothership.com.
+Quotes are booked in the Mothership dashboard from each quote's `dashboardUrl`, as the quote-create skill explains. Edits, reschedules, rebill disputes, and payment happen in the Mothership dashboard at https://dashboard.mothership.com. For help with an account or a shipment, the Mothership help center is at https://help.mothership.com.
 
 Base shipment details, prices, transit times, and carrier names on what the tools return. When a detail isn't in the results, say it isn't available yet.

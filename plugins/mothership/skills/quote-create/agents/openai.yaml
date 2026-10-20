@@ -1,6 +1,6 @@
 interface:
   display_name: "Get a quote"
-  short_description: "Freight rates for a shipment, and booking"
+  short_description: "Freight rates for a shipment"
 dependencies:
   tools:
     - type: "mcp"
