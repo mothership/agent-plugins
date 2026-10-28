@@ -39,3 +39,7 @@ After installing, sign in with your Mothership account when the assistant asks t
 ## Support
 
 Visit https://help.mothership.com for help with your account or a shipment.
+
+## License
+
+The files in this repository are under the [MIT License](LICENSE). The Mothership name and logo are trademarks of Mothership Technologies, Inc., and the license doesn't cover them. Using them needs Mothership's prior written permission. See [TRADEMARKS.md](TRADEMARKS.md). The Mothership terms of service at https://help.mothership.com/terms-of-service-general-terms govern your use of the Mothership service and its MCP server.

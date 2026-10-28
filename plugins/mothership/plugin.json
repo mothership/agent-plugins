@@ -1,14 +1,14 @@
 {
 	"$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
 	"name": "mothership",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Connect ChatGPT and Codex to Mothership LTL, FTL & Local Freight.",
 	"author": {
 		"name": "Mothership",
 		"url": "https://www.mothership.com"
 	},
 	"homepage": "https://www.mothership.com",
-	"license": "Proprietary",
+	"license": "MIT",
 	"keywords": [
 		"freight",
 		"shipping",

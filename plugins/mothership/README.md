@@ -24,3 +24,7 @@ When your assistant calls a Mothership tool, it sends the tool's arguments to ht
 ## Support
 
 Visit https://help.mothership.com for help with your account or a shipment, or https://dashboard.mothership.com to manage shipments.
+
+## License
+
+The files in this plugin are under the [MIT License](LICENSE). The Mothership name and logo, including `./assets/logo.png`, are trademarks of Mothership Technologies, Inc., and the license doesn't cover them. Using them needs Mothership's prior written permission. The Mothership terms of service at https://help.mothership.com/terms-of-service-general-terms govern your use of the Mothership service and its MCP server.
