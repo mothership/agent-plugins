@@ -3,7 +3,7 @@
 	"name": "com.mothership/mothership",
 	"title": "Mothership",
 	"description": "Mothership LTL, FTL & Local Freight: get quotes and track shipments.",
-	"version": "1.0.7",
+	"version": "1.0.9",
 	"websiteUrl": "https://www.mothership.com",
 	"repository": {
 		"url": "https://github.com/mothership/agent-plugins",
